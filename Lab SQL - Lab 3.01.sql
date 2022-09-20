@@ -1,8 +1,8 @@
 use sakila;
 
 -- 1.Drop column picture from staff.
-ALTER TABLE sakila.staff
-DROP picture;
+alter table sakila.staff
+drop picture;
     
 -- 2.A new person is hired to help Jon. Her name is TAMMY SANDERS, and she is a customer. Update the database accordingly.
 insert into sakila.staff(first_name, last_name, email, address_id, store_id, username)
@@ -31,5 +31,5 @@ from staff; -- From here we can see that Mike Hillyer staff_id is 1
 
 -- Actual answer
 insert into sakila.rental(rental_date, inventory_id, customer_id, return_date, staff_id)
-values(CURRENT_TIMESTAMP,1, 130, DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d %T'),1);
+values(current_timestamp,1, 130, date_format(current_timestamp, '%Y-%m-%d %T'),1);
 
